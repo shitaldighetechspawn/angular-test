@@ -1,9 +1,22 @@
-(function(){(
+(function(){
 'use strict';
 
-angular.module('myFirstApp', [])
-.controller('MyFirstController', function(){
 
-});
+angular.module('DIApp', [])
 
-)}();
+.controller('DIController',DIController);
+function DIController ($scope, $filter){
+	$scope.name = "SHital";
+
+	$scope.upper = function(){
+		var upCase = $filter('uppercase');
+		$scope.name = upCase($scope.name);
+	};
+}
+
+function AnnonateMe(name , job, blah){
+	return "Blah!"
+}
+console.log(AnnonateMe());
+
+})();

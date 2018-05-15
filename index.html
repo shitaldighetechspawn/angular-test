@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="myFirstApp">
+<html ng-app="DIApp">
 	<head>
 		<meta charset="utf-8">
 		<title> Angular JS</title>
 		<script type="text/javascript" src="/js/angular.min.js"></script>
 		<script type="text/javascript" src="/js/app.js"></script>
+		<style> body {font-size: 1.3em;}</style>
+		</script>
 	</head>
 <body>
-	<div ng-controller="MyFirstController">
-		<h1> Lets Start With </h1>
+	<h1>Calculator </h1>
+	<div ng-controller="DIController">
+		<div>
+			Your Name: 
+			<input type="text" ng-model="name" ng-blur="upper();">
+
+			<input type="checkbox" id="checkbox" ng-model="checked">
+			<label for="checkbox">{{ checked }}</label>
+		</div>
+		<div> </div> 
 	</div>
 </body>
 </html>
